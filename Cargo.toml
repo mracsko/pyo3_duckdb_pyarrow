@@ -1,0 +1,13 @@
+[package]
+name = "pyo3_duckdb_pyarrow"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.83.0"
+
+[lib]
+name = "pyo3_duckdb_pyarrow"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22.6", features = ["extension-module", "abi3-py38" ] }
+duckdb = { version = "1.1.1", features = ["bundled", "r2d2"] }
