@@ -1,11 +1,11 @@
 FROM mcr.microsoft.com/windows/servercore:ltsc2022
 
-#Install Python 3.10.11 & included pip (23.0.1)
-ADD https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe /python-3.10.11.exe
+#Install Python 3.12.8 & included pip (23.0.1)
+ADD https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe /python-3.12.8.exe
 RUN powershell.exe -Command \
     $ErrorActionPreference = 'Stop'; \
-	Start-Process c:\python-3.10.11.exe -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1' -Wait ; \
-	Remove-Item -Force python-3.10.11.exe;
+	Start-Process c:\python-3.12.8.exe -ArgumentList '/quiet InstallAllUsers=1 PrependPath=1' -Wait ; \
+	Remove-Item -Force python-3.12.8.exe;
 
 SHELL ["cmd", "/S", "/C"]
 

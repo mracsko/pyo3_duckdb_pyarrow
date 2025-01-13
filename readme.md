@@ -1,6 +1,6 @@
 # PyO3 DuckDB pyarrow Windows Issue
 
-The following example reproduces an issue with PyO3, DuckDB, and pyarrow on Windows.
+The following example reproduces an issue with PyO3, DuckDB, and pyarrow on Windows. The issue is related to the import order of a custom PyO3 module with bundled duckdb (`pyo3_duckdb_pyarrow`) and the `pyarrow` module.
 
 Tne problem only occurs on Windows. The code works on Linux.
 
@@ -80,6 +80,11 @@ The container installs the following versions:
 - Python packages:
   - pyarrow==18.1.0
   - maturin==1.8.1
+- Rust dependencies:
+  - pyo3: 0.23.4
+  - duckdb: 1.1.1
 
 ## Additional notes
 - The issue cannot be reproduced on my home computer, but it can be reproduced on my work computer and in the provided container.
+- Original issue found with PyO3 `0.22.6`, but could be reproduced with `0.23.4`.
+- Reproduced with Python 3.10.11 (pip 23.0.1) and 3.12.8 (pip 23.0.1).
