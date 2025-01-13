@@ -4,6 +4,6 @@ build-backend = "maturin"
 
 [proaject]
 name = "pyo3_duckdb_pyarrow"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 
 dynamic = ["version"]
