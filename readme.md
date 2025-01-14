@@ -73,7 +73,7 @@ docker build -t reproduce-issue .
 ## Versions
 
 The container installs the following versions:
-- Install Python 3.10.11 & included pip (23.0.1)
+- Install Python 3.12.8
 - Latest VS Build Tools (https://aka.ms/vs/17/release/vs_BuildTools.exe):
   - Microsoft.VisualStudio.Component.Windows10SDK.18362
 - Latest Rust wit Rustup
@@ -87,4 +87,7 @@ The container installs the following versions:
 ## Additional notes
 - The issue cannot be reproduced on my home computer, but it can be reproduced on my work computer and in the provided container.
 - Original issue found with PyO3 `0.22.6`, but could be reproduced with `0.23.4`.
-- Reproduced with Python 3.10.11 (pip 23.0.1) and 3.12.8 (pip 23.0.1).
+- Reproduced with Python `3.10.11`, `3.12.8` and `3.13.1`.
+- Reproduced with MVSC `Microsoft.VisualStudio.Component.Windows11SDK.22000` and `Microsoft.VisualStudio.Component.Windows10SDK.18362`.
+- Reproduced with PyO3 Feature `abi3-py311` and `abi3-py38`.
+- Reproduced with Docker base image `mcr.microsoft.com/windows/servercore:ltsc2022` and `mcr.microsoft.com/windows:ltsc2019`.
