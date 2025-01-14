@@ -39,7 +39,7 @@ The `assert_eq!(state, ffi::DuckDBSuccess);` lines fails because `let state = un
 
 According to the documentation of (see [here](https://github.com/duckdb/duckdb-rs/blob/2bd811e7b1b7398c4f461de4de263e629572dc90/crates/libduckdb-sys/src/bindgen_bundled_version.rs#L2486)) this only can fail due to malloc issues: `... This will always succeed unless there is a malloc failure. ...`
 
-**I am not sure if the issue is PyO3, DuckDB, pyarrow, Python or Rust related.**
+**I am not sure if the issue is strictly PyO3 related or maybe DuckDB, pyarrow, Python or Rust or the combination of those are causing the issue.**
 
 ### Works
 
